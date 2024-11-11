@@ -26,23 +26,29 @@ function App() {
       <hr />
       <div>
         <h3>useState, useEffect</h3>
+        {/* Button to increment the count */}
         <button onClick={increment}>count is {count}</button>
       </div>
       <hr />
       <div>
         <h3>useCallback</h3>
+        {/* Button to add a new todo */}
         <button onClick={addTodo}>Add Todo</button>
       </div>
       <div>
+        {/* Display the list of todos */}
         {todos.map((todo, index) => (
           <p key={index}>{todo}</p>
         ))}
       </div>
       <hr />
+      {/* Profile component */}
       <Profile />
       <hr />
+      {/* Memo component */}
       <Memo />
       <hr />
+      {/* WithoutMemo component */}
       <WithoutMemo />
     </>
   );

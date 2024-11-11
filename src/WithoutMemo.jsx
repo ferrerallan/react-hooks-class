@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 
+// Initialize a large array of items with one selected item
 const initialItems = new Array(29_999_999).fill(0).map((_, i) => {
   return {
     id: i,
@@ -8,11 +9,14 @@ const initialItems = new Array(29_999_999).fill(0).map((_, i) => {
 });
 
 function WithoutMemo() {
+  // State to keep track of the count
   const [count, setCount] = useState(0);
 
+  // State to keep track of the items
   const [items] = useState(initialItems);
 
-  const selectedItem = items.find((item) => item.isSelected)
+  // Find the selected item from the items array
+  const selectedItem = items.find((item) => item.isSelected);
 
   return (
     <div>
