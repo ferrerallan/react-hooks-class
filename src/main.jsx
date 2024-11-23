@@ -4,17 +4,21 @@ import App from './App';
 import { useState } from 'react';
 import UserContext from './UserContext';
 
-// Create a root element for rendering the React application
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// Main component to provide user context and render the App component
 function Main() {
-  // State to hold user information
-  const [user, setUser] = useState({ nome: 'Maria' });
+  // Estado para a variável status
+  const [status, setStatus] = useState('Iniciante');
+
+  // Valor do contexto com o usuário e a função para atualizar o status
+  const value = {
+    user: { nome: 'Maria' },
+    status: status,
+    setStatus: setStatus
+  };
 
   return (
-    // Provide user context to the App component
-    <UserContext.Provider value={user}>
+    <UserContext.Provider value={value}>
       <App />
     </UserContext.Provider>
   );

@@ -3,6 +3,7 @@ import "./App.css";
 import Memo from "./Memo";
 import WithoutMemo from "./WithoutMemo";
 import Profile from "./Profile";
+import Profile2 from "./Profile2";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -50,6 +51,7 @@ function App() {
       <hr />
       {/* WithoutMemo component */}
       <WithoutMemo />
+      <Profile2 />
     </>
   );
 }
